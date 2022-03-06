@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="CENTER" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="15.0" layoutY="225.0" stroke="BLACK" strokeType="INSIDE" width="970.0" />
+            <Text fill="WHITE" layoutX="84.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you got here, please dm me on instagram: abdullah_.ha">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="52.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="also, pls dont use my code without my permission :D">
+               <font>
+                  <Font size="5.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="95.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Text>
+            </children>
+        </Pane>
+    </children>
+</GridPane>

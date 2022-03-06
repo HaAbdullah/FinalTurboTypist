@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.build_tempotypetest.GameController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane prefHeight="650.0" prefWidth="1000.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#17181c" height="650.0" stroke="BLACK" strokeType="INSIDE" width="1000.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="89.0" layoutX="213.0" layoutY="26.0" strokeType="INSIDE" strokeWidth="3.5" width="574.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7529411911964417" green="0.0784313753247261" blue="0.8588235378265381" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.27450981736183167" green="0.42352941632270813" blue="0.9215686321258545" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke></Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="105.0" layoutX="-27.0" layoutY="248.0" strokeType="INSIDE" strokeWidth="3.5" width="1061.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7529411911964417" green="0.0784313753247261" blue="0.8588235378265381" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.27450981736183167" green="0.42352941632270813" blue="0.9215686321258545" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Rectangle>
+            <Text layoutX="336.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Typing!">
+               <font>
+                  <Font name="Verdana" size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="programWord" layoutX="367.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="information" textAlignment="CENTER" wrappingWidth="273.9999999999999">
+               <font>
+                  <Font name="Calibri" size="56.0" />
+               </font>
+            </Text>
+            <Text fx:id="secondProgramWord" fill="#b3b3c3" layoutX="624.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="wordfun" textAlignment="CENTER" wrappingWidth="223.216796875">
+               <font>
+                  <Font name="Calibri" size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="thirdProgramWord" fill="#b3b3c3" layoutX="836.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="wordfun" textAlignment="CENTER" wrappingWidth="178.0">
+               <font>
+                  <Font name="Calibri" size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="firstGoneWord" fill="#b3b3c3" layoutX="144.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="wordfun" textAlignment="CENTER" wrappingWidth="237.21679687499994">
+               <font>
+                  <Font name="Calibri" size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="secondGoneWord" fill="#b3b3c3" layoutX="-35.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="wordfun" textAlignment="CENTER" wrappingWidth="217.216796875">
+               <font>
+                  <Font name="Calibri" size="50.0" />
+               </font>
+            </Text>
+            <Circle fill="WHITE" layoutX="88.0" layoutY="70.0" radius="53.0" strokeType="INSIDE" strokeWidth="3.5">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7529411911964417" green="0.0784313753247261" blue="0.8588235378265381" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9965635738831615">
+                           <color>
+                              <Color red="0.27450981736183167" green="0.42352941632270813" blue="0.9215686321258545" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Circle>
+            <Text fx:id="seconds" layoutX="14.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="147.216796875">
+               <font>
+                  <Font name="Verdana Bold" size="48.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="354.0" layoutY="377.0" strokeType="INSIDE" strokeWidth="3.5" width="281.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7529411911964417" green="0.0784313753247261" blue="0.8588235378265381" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.27450981736183167" green="0.42352941632270813" blue="0.9215686321258545" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Rectangle>
+            <TextField fx:id="userWord" alignment="CENTER" layoutX="357.0" layoutY="381.0" onKeyPressed="#startGame" prefHeight="61.0" prefWidth="274.0">
+               <font>
+                  <Font name="Calibri" size="40.0" />
+               </font></TextField>
+            <Circle layoutX="424.0" layoutY="171.0" radius="45.0" strokeType="INSIDE" strokeWidth="3.5">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7529411911964417" green="0.0784313753247261" blue="0.8588235378265381" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9965635738831615">
+                           <color>
+                              <Color red="0.27450981736183167" green="0.42352941632270813" blue="0.9215686321258545" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Circle>
+            <Text fx:id="wordsPerMin" fill="WHITE" layoutX="355.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="139.0">
+               <font>
+                  <Font size="43.0" />
+               </font></Text>
+            <Circle layoutX="556.0" layoutY="171.0" radius="45.0" strokeType="INSIDE" strokeWidth="3.5">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7529411911964417" green="0.0784313753247261" blue="0.8588235378265381" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9965635738831615">
+                           <color>
+                              <Color red="0.27450981736183167" green="0.42352941632270813" blue="0.9215686321258545" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Circle>
+            <Text fx:id="accuracy" fill="WHITE" layoutX="509.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="60.982421875">
+               <font>
+                  <Font size="35.0" />
+               </font></Text>
+            <Text fill="WHITE" layoutX="405.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Words">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="532.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accuracy">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="percent" fill="WHITE" layoutX="569.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="29.21484375">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Text>
+            <Circle fill="WHITE" layoutX="425.0" layoutY="572.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+            <Button layoutX="380.0" layoutY="532.0" mnemonicParsing="false" onAction="#switchToStats" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../nextButton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Circle fill="WHITE" layoutX="556.0" layoutY="572.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+            <Button fx:id="playAgain" alignment="CENTER" layoutX="510.0" layoutY="532.0" mnemonicParsing="false" onAction="#switchToMainthroughGame" prefHeight="72.0" prefWidth="72.0" style="-fx-background-color: transparent;" textFill="#571a1a">
+               <graphic>
+                  <ImageView fitHeight="72.0" fitWidth="76.0">
+                     <image>
+                        <Image url="@../../../reloadButton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

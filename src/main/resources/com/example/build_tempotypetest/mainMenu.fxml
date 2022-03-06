@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="CENTER" prefHeight="650.0" prefWidth="1000.0" style="-fx-cursor: hand;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.build_tempotypetest.HelloController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="200.0" prefWidth="200.0">
+            <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#17181c" height="658.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="1000.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3697" height="13.0" layoutX="-12.0" layoutY="320.0" strokeType="INSIDE" strokeWidth="2.5" width="447.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7529411911964417" green="0.0784313753247261" blue="0.8588235378265381" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color red="0.7208820581436157" green="0.35672515630722046" blue="0.8026315569877625" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9106529209621993">
+                           <color>
+                              <Color red="0.3686274588108063" green="0.5058823823928833" blue="0.8823529481887817" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.3686274588108063" green="0.5058823823928833" blue="0.8823529481887817" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke></Rectangle>
+            <Text layoutX="60.0" layoutY="188.0" stroke="#0009ff" strokeType="OUTSIDE" strokeWidth="0.65" text="TurboTypist" textAlignment="CENTER" wrappingWidth="880.921875">
+               <font>
+                  <Font name="Verdana" size="140.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7529411911964417" green="0.0784313753247261" blue="0.8588235378265381" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color red="0.7215686440467834" green="0.35686275362968445" blue="0.8039215803146362" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.3686274588108063" green="0.5058823823928833" blue="0.8823529481887817" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Button fx:id="button" layoutX="425.0" layoutY="254.0" mnemonicParsing="false" onAction="#switchtoUserProfile" prefHeight="128.0" prefWidth="140.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="134.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Play.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3697" height="13.0" layoutX="565.0" layoutY="319.0" strokeType="INSIDE" strokeWidth="2.5" width="447.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7529411911964417" green="0.0784313753247261" blue="0.8588235378265381" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color red="0.7208820581436157" green="0.35672515630722046" blue="0.8026315569877625" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9106529209621993">
+                           <color>
+                              <Color red="0.3686274588108063" green="0.5058823823928833" blue="0.8823529481887817" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.3686274588108063" green="0.5058823823928833" blue="0.8823529481887817" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke></Rectangle>
+            <Button layoutX="-11.0" layoutY="548.0" mnemonicParsing="false" onAction="#switchToInfo" prefHeight="104.0" prefWidth="122.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="92.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../information%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="184.0" layoutY="489.0" mnemonicParsing="false" onAction="#switchToInfo" prefHeight="104.0" prefWidth="122.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="92.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="C:\Users\admin\Documents\TurboTypistResources" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="475.0" layoutY="295.0" mnemonicParsing="false" onAction="#switchtoUserProfile" prefHeight="41.0" prefWidth="52.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <Polygon points="132.0, -14.0, 178.0, -39.0, 132.0, -65.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.7529411911964417" green="0.0784313753247261" blue="0.8588235378265381" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color red="0.7208820581436157" green="0.35672515630722046" blue="0.8026315569877625" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.9106529209621993">
+                                 <color>
+                                    <Color red="0.3686274588108063" green="0.5058823823928833" blue="0.8823529481887817" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.3686274588108063" green="0.5058823823928833" blue="0.8823529481887817" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Polygon>
+               </graphic>
+            </Button>
+            <Text fill="WHITE" layoutX="916.0" layoutY="645.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abdullah Hasanjee">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="80.0" fitWidth="74.0" layoutX="912.0" layoutY="567.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../MyLogo.png" />
+               </image>
+            </ImageView>
+            </children>
+        </Pane>
+    </children>
+</GridPane>
