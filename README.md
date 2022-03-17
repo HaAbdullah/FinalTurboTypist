@@ -5,3 +5,6 @@ No code was directly copied and all referenced code was used with a thorough und
 All icons are copyright-free and taken from flaticon.com.
 If you have any inquries or feedback please contact me through either instagram @abdullah_.ha or email at abdullah.hasanjee@gmail.com.
 Any and all feedback is highly appreciated. 
+
+Video Demo:
+https://youtu.be/h-Z8SxVfYc0
