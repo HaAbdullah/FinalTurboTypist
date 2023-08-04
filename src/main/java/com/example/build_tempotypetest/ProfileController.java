@@ -95,7 +95,7 @@ public class ProfileController {
 
             try {
                 // Creates a FileWriter
-                FileWriter file = new FileWriter("C:\\Users\\admin\\Documents\\TurboTypistResources\\LocalScores.txt", true);
+                FileWriter file = new FileWriter("C:\\Users\\abdul\\OneDrive\\Documents\\TurboTypistResources\\LocalScores.txt", true);
 
                 // Creates a BufferedWriter
                 BufferedWriter output = new BufferedWriter(file);

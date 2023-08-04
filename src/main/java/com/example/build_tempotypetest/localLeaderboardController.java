@@ -10,9 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -83,6 +82,21 @@ public class localLeaderboardController {
     private Scene scene;
     private Parent root;
 
+    private Connection connect() {
+        // Replace "your_database_url", "your_username", and "your_password" with your database credentials
+        String url = "jdbc:mysql://your_database_url";
+        String username = "your_username";
+        String password = "your_password";
+        Connection connection = null;
+
+        try {
+            connection = DriverManager.getConnection(url, username, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return connection;
+    }
+
     public void switchToStats(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("afterGameStats.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -92,182 +106,123 @@ public class localLeaderboardController {
     }
 
     public void initialize() {
+        ArrayList<String> Names = new ArrayList<>();
+        ArrayList<Integer> WPM = new ArrayList<>();
+        ArrayList<String> Accuracy = new ArrayList<>();
 
-        ArrayList<String> Names = new ArrayList<String>();
-        ArrayList<Integer> WPM = new ArrayList<Integer>();
-        ArrayList<String> Accuracy = new ArrayList<String>();
+        try (Connection connection = connect();
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM leaderboard ORDER BY WPM DESC LIMIT 10")) {
 
-        BufferedReader reader;
-        try {
-            reader = new BufferedReader(new FileReader(
-                    "C:\\Users\\admin\\Documents\\TurboTypistResources\\LocalScores.txt"));
-            String line = reader.readLine();
-            while (line != null && line.contains("-") == true) {
-                String[] ArrayLine = line.split("-");
-
-                Names.add(ArrayLine[0]);
-                WPM.add(Integer.valueOf(ArrayLine[1]));
-                Accuracy.add(ArrayLine[2]);
-                // read next line
-                line = reader.readLine();
+            while (resultSet.next()) {
+                Names.add(resultSet.getString("name"));
+                WPM.add(resultSet.getInt("wpm"));
+                Accuracy.add(resultSet.getString("accuracy"));
             }
-
-            System.out.println("Names:" + Names);
-            System.out.println("WPMS:" + WPM);
-            System.out.println("Accuracy:" + Accuracy);
-
-            int firstWPM = Collections.max(WPM);
-            int highestIteration = WPM.indexOf(firstWPM);
-
-
-            String firstName = Names.get(highestIteration);
-
-            String firstAccuracy = Accuracy.get(highestIteration);
-
-            WPM.set(highestIteration, 0);
-            //--------------------------
-
-            int secondWPM = Collections.max(WPM);
-            int secondHighestIteration = WPM.indexOf(secondWPM);
-
-
-            String secondName = Names.get(secondHighestIteration);
-            String secondAccuracy = Accuracy.get(secondHighestIteration);
-
-
-            WPM.set(secondHighestIteration, 0);
-            //--------------------------
-
-
-            int thirdWPM = Collections.max(WPM);
-            int thirdHighestIteration = WPM.indexOf(thirdWPM);
-
-
-            String thirdName = Names.get(thirdHighestIteration);
-            String thirdAccuracy = Accuracy.get(thirdHighestIteration);
-
-            WPM.set(thirdHighestIteration, 0);
-            //--------------------------
-
-
-            int fourthWPM = Collections.max(WPM);
-            int fourthHighestIteration = WPM.indexOf(fourthWPM);
-
-
-            String fourthName = Names.get(fourthHighestIteration);
-            String fourthAccuracy = Accuracy.get(fourthHighestIteration);
-
-            WPM.set(fourthHighestIteration, 0);
-            //--------------------------
-
-
-            int fifthWPM = Collections.max(WPM);
-            int fifthHighestIteration = WPM.indexOf(fifthWPM);
-
-
-            String fifthName = Names.get(fifthHighestIteration);
-            String fifthAccuracy = Accuracy.get(fifthHighestIteration);
-
-            WPM.set(fifthHighestIteration, 0);
-            //--------------------------
-
-
-            int sixthWPM = Collections.max(WPM);
-            int sixthHighestIteration = WPM.indexOf(sixthWPM);
-
-
-            String sixthName = Names.get(sixthHighestIteration);
-            String sixthAccuracy = Accuracy.get(sixthHighestIteration);
-
-            WPM.set(sixthHighestIteration, 0);
-            //--------------------------
-
-
-            int seventhWPM = Collections.max(WPM);
-            int seventhHighestIteration = WPM.indexOf(seventhWPM);
-
-
-            String seventhName = Names.get(seventhHighestIteration);
-            String seventhAccuracy = Accuracy.get(seventhHighestIteration);
-
-            WPM.set(seventhHighestIteration, 0);
-            //--------------------------
-
-
-            int eigthWPM = Collections.max(WPM);
-            int eigthHighestIteration = WPM.indexOf(eigthWPM);
-
-
-            String eigthName = Names.get(eigthHighestIteration);
-            String eigthAccuracy = Accuracy.get(eigthHighestIteration);
-
-
-            WPM.set(eigthHighestIteration, 0);
-            //--------------------------
-
-
-            int ninthWPM = Collections.max(WPM);
-            int ninthHighestIteration = WPM.indexOf(ninthWPM);
-
-
-            String ninthName = Names.get(ninthHighestIteration);
-            String ninthAccuracy = Accuracy.get(ninthHighestIteration);
-
-            WPM.set(ninthHighestIteration, 0);
-            //--------------------------
-
-
-            int tenthWPM = Collections.max(WPM);
-            int tenthHighestIteration = WPM.indexOf(tenthWPM);
-
-
-            String tenthName = Names.get(tenthHighestIteration);
-
-            String tenthAccuracy = Accuracy.get(tenthHighestIteration);
-
-
-            WPM.set(ninthHighestIteration, 0);
-
-            firstNamet.setText(firstName);
-            secondNamet.setText(secondName);
-            thirdNamet.setText(thirdName);
-            fourthNamet.setText(fourthName);
-            fifthNamet.setText(fifthName);
-            sixthNamet.setText(sixthName);
-            seventhNamet.setText(seventhName);
-            eigthNamet.setText(eigthName);
-            ninthNamet.setText(ninthName);
-            tenthNamet.setText(tenthName);
-
-            firstAccuracyt.setText(firstAccuracy);
-            secondAccuracyt.setText(secondAccuracy);
-            thirdAccuracyt.setText(thirdAccuracy);
-            fourthAccuracyt.setText(fourthAccuracy);
-            fifthAccuracyt.setText(fifthAccuracy);
-            sixthAccuracyt.setText(sixthAccuracy);
-            seventhAccuracyt.setText(seventhAccuracy);
-            eightAccuracyt.setText(eigthAccuracy);
-            ninthAccuracyt.setText(ninthAccuracy);
-            tenthAccuracyt.setText(tenthAccuracy);
-
-            firstWPMt.setText(String.valueOf(firstWPM));
-            secondWPMt.setText(String.valueOf(secondWPM));
-            thirdWPMt.setText(String.valueOf(thirdWPM));
-            fourthWPMt.setText(String.valueOf(fourthWPM));
-            fifthWPMt.setText(String.valueOf(fifthWPM));
-            sixthWPMt.setText(String.valueOf(sixthWPM));
-            seventhWPMt.setText(String.valueOf(seventhWPM));
-            eigthWPMt.setText(String.valueOf(eigthWPM));
-            ninthWPMt.setText(String.valueOf(ninthWPM));
-            tenthWPMt.setText(String.valueOf(tenthWPM));
-            //--------------------------
-
-            reader.close();
-        } catch (IOException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 
+        // Clear previous data from Text elements
+        clearTextElements();
+
+        int leaderboardSize = Names.size();
+        for (int i = 0; i < leaderboardSize; i++) {
+            String name = Names.get(i);
+            int wpm = WPM.get(i);
+            String accuracy = Accuracy.get(i);
+
+            setTextElement(i + 1, name, wpm, accuracy);
+        }
     }
 
+    private void clearTextElements() {
+        firstNamet.setText("");
+        firstWPMt.setText("");
+        firstAccuracyt.setText("");
+        secondNamet.setText("");
+        secondWPMt.setText("");
+        secondAccuracyt.setText("");
+        thirdNamet.setText("");
+        thirdWPMt.setText("");
+        thirdAccuracyt.setText("");
+        fourthNamet.setText("");
+        fourthWPMt.setText("");
+        fourthAccuracyt.setText("");
+        fifthNamet.setText("");
+        fifthWPMt.setText("");
+        fifthAccuracyt.setText("");
+        sixthNamet.setText("");
+        sixthWPMt.setText("");
+        sixthAccuracyt.setText("");
+        seventhNamet.setText("");
+        seventhWPMt.setText("");
+        seventhAccuracyt.setText("");
+        eigthNamet.setText("");
+        eigthWPMt.setText("");
+        eightAccuracyt.setText("");
+        ninthNamet.setText("");
+        ninthWPMt.setText("");
+        ninthAccuracyt.setText("");
+        tenthNamet.setText("");
+        tenthWPMt.setText("");
+        tenthAccuracyt.setText("");
+    }
 
+    private void setTextElement(int position, String name, int wpm, String accuracy) {
+        switch (position) {
+            case 1:
+                firstNamet.setText(name);
+                firstWPMt.setText(String.valueOf(wpm));
+                firstAccuracyt.setText(accuracy);
+                break;
+            case 2:
+                secondNamet.setText(name);
+                secondWPMt.setText(String.valueOf(wpm));
+                secondAccuracyt.setText(accuracy);
+                break;
+            case 3:
+                thirdNamet.setText(name);
+                thirdWPMt.setText(String.valueOf(wpm));
+                thirdAccuracyt.setText(accuracy);
+                break;
+            case 4:
+                fourthNamet.setText(name);
+                fourthWPMt.setText(String.valueOf(wpm));
+                fourthAccuracyt.setText(accuracy);
+                break;
+            case 5:
+                fifthNamet.setText(name);
+                fifthWPMt.setText(String.valueOf(wpm));
+                fifthAccuracyt.setText(accuracy);
+                break;
+            case 6:
+                sixthNamet.setText(name);
+                sixthWPMt.setText(String.valueOf(wpm));
+                sixthAccuracyt.setText(accuracy);
+                break;
+            case 7:
+                seventhNamet.setText(name);
+                seventhWPMt.setText(String.valueOf(wpm));
+                seventhAccuracyt.setText(accuracy);
+                break;
+            case 8:
+                eigthNamet.setText(name);
+                eigthWPMt.setText(String.valueOf(wpm));
+                eightAccuracyt.setText(accuracy);
+                break;
+            case 9:
+                ninthNamet.setText(name);
+                ninthWPMt.setText(String.valueOf(wpm));
+                ninthAccuracyt.setText(accuracy);
+                break;
+            case 10:
+                tenthNamet.setText(name);
+                tenthWPMt.setText(String.valueOf(wpm));
+                tenthAccuracyt.setText(accuracy);
+                break;
+            default:
+                break;
+        }
+    }
 }

@@ -71,7 +71,7 @@ public class StatsController implements Initializable{
 
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new FileReader("C:\\Users\\admin\\Documents\\TurboTypistResources\\LocalScores.txt"));
+            br = new BufferedReader(new FileReader("C:\\Users\\abdul\\OneDrive\\Documents\\TurboTypistResources\\LocalScores.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

@@ -99,7 +99,7 @@ public class GameController implements Initializable {
     public void addToList() {
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new FileReader("C:\\Users\\admin\\Documents\\TurboTypistResources\\localThemes.txt"));
+            br = new BufferedReader(new FileReader("C:\\Users\\abdul\\OneDrive\\Documents\\TurboTypistResources\\localThemes.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -205,7 +205,7 @@ public class GameController implements Initializable {
     public int getTimer(){
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new FileReader("C:\\Users\\admin\\Documents\\TurboTypistResources\\localTimers.txt"));
+            br = new BufferedReader(new FileReader("C:\\Users\\abdul\\OneDrive\\Documents\\TurboTypistResources\\localTimers.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -257,7 +257,7 @@ public class GameController implements Initializable {
 
                         try {
                             // Creates a FileWriter
-                            FileWriter file = new FileWriter("C:\\Users\\admin\\Documents\\TurboTypistResources\\LocalScores.txt", true);
+                            FileWriter file = new FileWriter("C:\\Users\\abdul\\OneDrive\\Documents\\TurboTypistResources\\LocalScores.txt", true);
 
                             // Creates a BufferedWriter
                             BufferedWriter output = new BufferedWriter(file);
@@ -340,7 +340,7 @@ public class GameController implements Initializable {
     String number = "10";
     public String getNumber() throws IOException {
 
-        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\admin\\Documents\\TurboTypistResources\\LocalScores.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\abdul\\OneDrive\\Documents\\TurboTypistResources\\LocalScores.txt"));
 
         String lastLine = "";
         String sCurrentLine;

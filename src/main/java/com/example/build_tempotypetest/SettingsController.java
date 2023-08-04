@@ -61,7 +61,7 @@ public class SettingsController implements Initializable{
             theme = rButton4.getText();
             try {
                 // Creates a FileWriter
-                FileWriter file = new FileWriter("C:\\Users\\admin\\Documents\\TurboTypistResources\\LocalScores.txt", true);
+                FileWriter file = new FileWriter("C:\\Users\\abdul\\OneDrive\\Documents\\TurboTypistResources\\LocalScores.txt", true);
 
                 // Creates a BufferedWriter
                 BufferedWriter output = new BufferedWriter(file);
@@ -86,7 +86,7 @@ public class SettingsController implements Initializable{
         getTheme();
         try {
             // Creates a FileWriter
-            FileWriter file = new FileWriter("C:\\Users\\admin\\Documents\\TurboTypistResources\\localThemes.txt");
+            FileWriter file = new FileWriter("C:\\Users\\abdul\\OneDrive\\Documents\\TurboTypistResources\\localThemes.txt");
 
             // Creates a BufferedWriter
             BufferedWriter output = new BufferedWriter(file);
@@ -114,7 +114,7 @@ public class SettingsController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resources) {
 
-        File file = new File("C:\\Users\\admin\\Documents\\TurboTypistResources\\gamerMusic.mp3");
+        File file = new File("C:\\Users\\abdul\\OneDrive\\Documents\\TurboTypistResources\\gamerMusic.mp3");
 
         media = new Media(file.toURI().toString());
         mediaPlayer = new MediaPlayer(media);
@@ -148,7 +148,7 @@ public class SettingsController implements Initializable{
     public void giveTimer(){
         try {
             // Creates a FileWriter
-            FileWriter file = new FileWriter("C:\\Users\\admin\\Documents\\TurboTypistResources\\localTimers.txt");
+            FileWriter file = new FileWriter("C:\\Users\\abdul\\OneDrive\\Documents\\TurboTypistResources\\localTimers.txt");
 
             // Creates a BufferedWriter
             BufferedWriter output = new BufferedWriter(file);
